@@ -172,7 +172,7 @@ header .hero {
 
  /* PRICING */
  .pricing {
-   background: #5cb4be url("/Users/sichen125/Desktop/Blocbox/images/background.png") top center no-repeat;
+   background: #5cb4be url("https://raw.githubusercontent.com/seelc/Blocbox/gh-pages/images/background.png") top center no-repeat;
    background-size: cover;
    text-align: center;
    padding: 4em 0;

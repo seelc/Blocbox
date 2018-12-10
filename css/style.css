@@ -47,6 +47,12 @@ html, body{
    .container {
      width: 750px;
    }
+   header nav ul > li.btn-outline:hover {
+   
+   }
+ header nav ul > li > a{
+   matgin:-20em 0 0 0;
+   }
  }
  @media (min-width: 992px) {
    .container {

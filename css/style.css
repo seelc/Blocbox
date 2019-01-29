@@ -420,6 +420,12 @@ header .hero {
    text-align: center;
    margin-right: 8px;
 }
+.left-nav .items ul li a:active {
+   background-color: #F1B26F;
+}
+.left-nav .current {
+   background-color: #5cb4be;
+}
 
 /* LEFT NAVBAR SETTINGS */
  .left-nav .settings {

@@ -230,7 +230,7 @@ header .hero {
    vertical-align: top;
  }
  .box h4 span.month {
-   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
    font-weight: 100;
    color:#888888;
    font-size:20px;
@@ -378,13 +378,43 @@ header .hero {
    background:#E2E2E2;
  }
  .left-nav {
-   height: 100vh;
-   width: 14.66666667%;
-   color: #FFFFFF;
-   background: #7DD4DE;
-   float: left;
-   position: fixed;
-   display: block;
+   height: 100%;
+   width: 280px;
+   position: absolute;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-280px,0);
+     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     -o-transform: translate(-280px,0); /** Opera **/
+     -moz-transform: translate(-280px,0); /** Firefox **/
+ }
+ .left-nav.open {
+   display:block;
+   width:280px;
+   background: #5cb4be;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background:#3D989D;
+   color:#FFF;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 15px;
  }
 .left-nav .site-logo {
    padding: 20px 0;
@@ -450,6 +480,7 @@ header .hero {
    padding-top: 8px;
    font-weight: 400;
    margin:0 0 0 10px;
+   color: #FFFFFF;
  }
  .left-nav .settings a {
    color:#FFFFFF;
@@ -457,7 +488,6 @@ header .hero {
    text-align: right;
    float: right;
    margin-right:10px;
-   margin-top:8px;
  }
 
  /* CONTENT */
@@ -544,6 +574,31 @@ header .hero {
    .content-item {
      width:23%;
      margin:0 1% 25px;
+   }
+ }
+ @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:14.66666667%;
+     color:#FFFFFF;
+     background: #5cb4be;
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
    }
  }
  .item-box > img {
